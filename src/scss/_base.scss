@@ -1,0 +1,226 @@
+//____________________
+//------HELPERS-------
+//====================
+
+//------Variables-------
+$color-primary: red;
+
+//------Mixins-------
+
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url(https://fonts.google.com/css?family=#{$font});
+}
+
+//------Functions-------
+
+//_________________
+//------BASE-------
+//=================
+
+//------Reset-------
+
+/*---------------
+/-----Resets-----
+-----------------*/
+:root {
+  font-size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  margin: 0.67rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+//------Typography-------
+
+// @use "1-helpers/1-helpers" as helpers;
+// @include helpers.google-font(font-name1);
+// @include helpers.google-font(font-name2);
+// or
+// @import url();
+
+// @font-face {
+//   font-family: "fontName";
+//   font-weight: "400";
+//   src: url("./fonts/fontName-normal.ttf"); //IE-9 Compat Modes
+//   src: url("./fonts/fontName-normal.ttf") format("embeded-opentype"),
+//     url("./fonts/fontName-normal.ttf") format("woff"),
+//     url("./fonts/fontName-normal.ttf") format("woff2"),
+//     url("./fonts/fontName-normal.ttf") format("truetype"),
+//     url("./fonts/fontName-normal.ttf") format("svg");
+// }
+
+// //-----FONT SIZE FOR LARGE DEVICE-----
+// @media screen and (min-width: 968px) {
+//   :root {
+//     $font-big: 3rem;
+//     $font-h1: 2.25rem;
+//     $font-h2: 1.5rem;
+//     $font-h3: 1.25rem;
+//     $font-normal: 1rem;
+//     $font-small: 0.875rem;
+//     $font-smaller: 0.813rem;
+//   }
+// }
+
+// Common weight name mapping
+// 100 - thin
+// 200 - extra-light
+// 300 - light
+// 400 - normal/regular
+// 500 - medium
+// 600 - semi-bold
+// 700 - bold
+// 800 - extra-bold
+// 900 - black
+
+// h1-h6
+// // example
+// h3 {
+//   font-size: 1.999em;
+//   @media (max-width: $breakpoint-tablet) {
+//     font-size: 1.3em;
+//   }
+//   @media (max-width: $breakpoint-mobile) {
+//     font-size: 1.2em;
+//   }
+// }
+// p
+// a
+// strong
+// span
+// .h1-h6
+// .red .blue (or any other which you know that will repeat in your texts)
+// .small,
+// .large
+
+//------Global-------
+
+/*--- BASE ---*/
+body {
+}
+
+main {
+}
+
+h1 {
+  margin: 0.67rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+/*--- REUSEABLE CLASSES ---*/
+// .container,
+// .row {
+//   max-width: helpers.$width-content;
+//   margin: 0 auto;
+// }
+
+// .section {
+//   padding: helpers.$sp-2;
+// }
+
+// .section__title {
+//   font-size: helpers.$font-h2;
+// }
+
+// .section__sub-title {
+//   display: block;
+//   font-size: helpers.$font-h3;
+// }
+
+// .section__title,
+// .section__sub-title {
+//   text-align: center;
+//   letter-spacing: 1px;
+//   word-spacing: helpers.$sp-0-25;
+// }
+
+p {
+  color: $color-primary;
+  font: {
+    family: "Arial";
+    size: 1.2rem;
+    weight: 200;
+  }
+}
