@@ -2,22 +2,33 @@
 //------HELPERS-------
 //====================
 
-// //------Variables-------
-// // -------------------------
-// // -----COLOR VARIABLES-----
-// // -------------------------
-$color-primary: #111;
-// $color-secondary: #222;
-// $color-tertiary: #333;
-// $color-text: #505050;
-// $color-headline: #505050;
+// -------------------
+// -----MIXINS-----
+// -------------------
+
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url(https://fonts.google.com/css?family=#{$font});
+}
+
+// $font-primary: ;
+
+// -------------------
+// -----VARIABLES-----
+// -------------------
+
+//------Color Variables-------
+
+// $color-primary: ;
+// $color-secondary: ;
+// $color-tertiary: ;
+// $color-text: ;
+// $color-headline: ;
 // $color-link: ;
 // $color-body: ;
 // $color-container: ;
 
-// // ------------------------
-// // -----FONT VARIABLES-----
-// // ------------------------
+//------Font Variables-------
 
 // //-----FONT FAMILY-----
 // $font-primary: ;
@@ -41,14 +52,10 @@ $color-primary: #111;
 // $font-small: 0.813rem;
 // $font-smaller: 0.75rem;
 
-// // ------------------------
-// // -----REUSEABLE-----
-// // ------------------------
+// -----SPACE: MARGIN / PADDING / SIZES-----
+// -----------------------------------------
 
-// // -----SPACE: MARGIN / PADDING / SIZES-----
-// // -----------------------------------------
-
-// //-----BREAKPOINT VARIABLES-----
+///------Breakpoint Variables-------
 // $breakpoint-desktop: 1200px;
 // $breakpoint-laptop: 950px;
 // $breakpoint-tablet: 768px;
@@ -63,12 +70,12 @@ $color-primary: #111;
 //   }
 // }
 
-// //-----HEIGHT VARIABLES-----
+//-----Height Variables-----
 // $height-header: ;
 // $height-footer: ;
 // $width-content: ;
 
-// //-----SPACE VARIABLES-----
+//-----Space Variables-----
 // $sp-0-25: 1.25rem;
 // $sp-0-5: 0.5rem;
 // $sp-0-75: 0.75rem;
@@ -77,17 +84,10 @@ $color-primary: #111;
 // $sp-2: 2rem;
 // $sp-3: 3rem;
 
-// //-----Z-INDEX VARIABLES-----
+// //-----Z-Index Variables-----
 // $z-tooltip: 10;
 // $z-fixed: 100;
 // $z-modal: 1000;
-
-//------Mixins-------
-
-@mixin google-font($font) {
-  $font: unquote($font);
-  @import url(https://fonts.google.com/css?family=#{$font});
-}
 
 //------Functions-------
 
@@ -95,151 +95,9 @@ $color-primary: #111;
 //------BASE-------
 //=================
 
-//------Reset-------
-
-/*---------------
-/-----Resets-----
------------------*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/* micro clear fix */
-.grouping:before,
-.grouping:after {
-  content: " ";
-  display: table;
-}
-. grouping:after {
-  clear: both;
-}
-img,
-iframe,
-video,
-object {
-  max-width: 100%;
-}
-strong,
-b {
-  font-weight: bold;
-}
-
-//------Typography-------
+// -------------------
+// -----TYPOGRAPHY-----
+// -------------------
 
 // @use "1-helpers/1-helpers" as helpers;
 // @include helpers.google-font(font-name1);
@@ -302,7 +160,9 @@ b {
 // .small,
 // .large
 
-//------Global-------
+// -------------------
+// -----GLOBALS-----
+// -------------------
 
 /*--- BASE ---*/
 :root {
@@ -320,11 +180,11 @@ b {
 }
 
 body {
-  margin: 0;
-  font-family: helpers.$font-primary;
-  font-size: helpers.$font-normal;
-  background-color: helpers.$color-body;
-  color: helpers.$color-text;
+  // margin: 0;
+  // font-family: $font-primary;
+  // font-size: $font-normal;
+  // background-color: $color-body;
+  // color: $color-text;
 }
 
 main {
@@ -359,35 +219,26 @@ img {
 /*--- REUSEABLE CLASSES ---*/
 // .container,
 // .row {
-//   max-width: helpers.$width-content;
+//   max-width: $width-content;
 //   margin: 0 auto;
 // }
 
 // .section {
-//   padding: helpers.$sp-2;
+//   padding: $sp-2;
 // }
 
 // .section__title {
-//   font-size: helpers.$font-h2;
+//   font-size: $font-h2;
 // }
 
 // .section__sub-title {
 //   display: block;
-//   font-size: helpers.$font-h3;
+//   font-size: $font-h3;
 // }
 
 // .section__title,
 // .section__sub-title {
 //   text-align: center;
 //   letter-spacing: 1px;
-//   word-spacing: helpers.$sp-0-25;
+//   word-spacing: $sp-0-25;
 // }
-
-p {
-  color: $color-primary;
-  font: {
-    family: "Arial";
-    size: 1.2rem;
-    weight: 200;
-  }
-}
