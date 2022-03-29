@@ -3,108 +3,116 @@
 //====================
 
 // -------------------
-// -----MIXINS-----
+// ------MIXINS-------
 // -------------------
 
-@mixin google-font($font) {
+@mixin google-font($font, $weight) {
   $font: unquote($font);
-  @import url(https://fonts.google.com/css?family=#{$font});
+  @import url("https://fonts.googleapis.com/css2?family=#{$font}:wght@#{$weight}&display=swap");
 }
 
+@include google-font("lato", "100;300;400");
 // $font-primary: ;
-
 // -------------------
 // -----VARIABLES-----
 // -------------------
-
 //------Color Variables-------
+// $white: #fff;
+// $grey-dark: #333;
+// $grey-light: darken($white, 5%);
 
-// $color-primary: ;
-// $color-secondary: ;
-// $color-tertiary: ;
-// $color-text: ;
-// $color-headline: ;
-// $color-link: ;
-// $color-body: ;
-// $color-container: ;
-
+// $color-map: (
+//   primary: #111,
+//   accent: #111,
+//   secondary: #222,
+//   tertiary: #333,
+//   headline: $white,
+//   menu-items: #111,
+//   text: $grey-dark,
+//   link: #111,
+//   body: $white,
+//   container: $grey-light,
+// );
 //------Font Variables-------
-
 // //-----FONT FAMILY-----
 // $font-primary: ;
 // $font-secondary: ;
 // $font-tertiary: ;
-
-// //-----FONT WEIGHT-----
-// $font-bold: ;
-// $font-semi-bold: ;
-// $font-medium: ;
-// $font-regular: ;
-// $font-light: ;
-// $font-thin: ;
-
-// //-----FONT SIZE-----
-// $font-big: 2rem;
-// $font-h1: 1.5rem;
-// $font-h2: 1.25rem;
-// $font-h3: 1.125rem;
-// $font-normal: 0.938rem;
-// $font-small: 0.813rem;
-// $font-smaller: 0.75rem;
-
+// //-----FONT WEIGHT MAP-----
+// $font-weight-map: (
+//   bold: 700,
+//   semi-bold: 600,
+//   medium: 500,
+//   regular: 400,
+//   light: 300,
+//   extra-light: 200,
+//   thin: 100,
+// );
+// //-----FONT SIZE MAP-----
+// $font-size-map: (
+//   hero: 4.8rem,
+//   h1: 3.2rem,
+//   h2: 2.4rem,
+//   h3: 1.87rem,
+//   normal: 1.6rem,
+//   small: 1.3rem,
+//   smaller: 1.2rem,
+//   big: 1.9rem,
+//   bigger: 2.1rem,
+// );
 // -----SPACE: MARGIN / PADDING / SIZES-----
 // -----------------------------------------
+// //------Breakpoint Variables Map-------
+// $breakpoint-map: (
+//   x-large: 1200px,
+//   large: 960px,
+//   medium: 680px,
+//   small: 480px,
+//   tiny: 320px,
+// );
 
-///------Breakpoint Variables-------
-// $breakpoint-desktop: 1200px;
-// $breakpoint-laptop: 950px;
-// $breakpoint-tablet: 768px;
-// $breakpoint-mobile: 400px;
+// $height-header: 60px;
+// $height-footer: 60px;
+// $width-content: 1140px;
 
-// $mobile-first: "screen and (min-width: 300px)";
+//-----SPACE VARIABLES-----
 
-// @media #{$mobile-first} {
-//   #content {
-//     font-size: 14px;
-//     line-height: 1.5;
-//   }
-// }
-
-//-----Height Variables-----
-// $height-header: ;
-// $height-footer: ;
-// $width-content: ;
-
-//-----Space Variables-----
-// $sp-0-25: 1.25rem;
+// $sp-1-25: 1.25rem;
 // $sp-0-5: 0.5rem;
 // $sp-0-75: 0.75rem;
 // $sp-1: 1rem;
 // $sp-1-5: 1.5rem;
 // $sp-2: 2rem;
 // $sp-3: 3rem;
-
 // //-----Z-Index Variables-----
 // $z-tooltip: 10;
 // $z-fixed: 100;
 // $z-modal: 1000;
 
 //------Functions-------
+@function color($colr) {
+  @return map-get($map: $color-map, $key: $colr);
+}
+
+@function font-weight($weight) {
+  @return map-get($map: $font-weight-map, $key: $weight);
+}
+
+@function font-size($size) {
+  @return map-get($map: $font-size-map, $key: $size);
+}
 
 //_________________
 //------BASE-------
 //=================
-
 // -------------------
 // -----TYPOGRAPHY-----
 // -------------------
-
 // @use "1-helpers/1-helpers" as helpers;
 // @include helpers.google-font(font-name1);
 // @include helpers.google-font(font-name2);
 // or
 // @import url();
-
 // @font-face {
 //   font-family: "fontName";
 //   font-weight: "400";
@@ -114,19 +122,6 @@
 //     url("./fonts/fontName-normal.ttf") format("woff2"),
 //     url("./fonts/fontName-normal.ttf") format("truetype"),
 //     url("./fonts/fontName-normal.ttf") format("svg");
-// }
-
-// //-----FONT SIZE FOR LARGE DEVICE-----
-// @media screen and (min-width: 968px) {
-//   :root {
-//     $font-big: 3rem;
-//     $font-h1: 2.25rem;
-//     $font-h2: 1.5rem;
-//     $font-h3: 1.25rem;
-//     $font-normal: 1rem;
-//     $font-small: 0.875rem;
-//     $font-smaller: 0.813rem;
-//   }
 // }
 
 // Common weight name mapping
@@ -140,33 +135,12 @@
 // 800 - extra-bold
 // 900 - black
 
-// h1-h6
-// // example
-// h3 {
-//   font-size: 1.999em;
-//   @media (max-width: $breakpoint-tablet) {
-//     font-size: 1.3em;
-//   }
-//   @media (max-width: $breakpoint-mobile) {
-//     font-size: 1.2em;
-//   }
-// }
-// p
-// a
-// strong
-// span
-// .h1-h6
-// .red .blue (or any other which you know that will repeat in your texts)
-// .small,
-// .large
-
 // -------------------
 // -----GLOBALS-----
 // -------------------
 
-/*--- BASE ---*/
 :root {
-  font-size: 16px;
+  font-size: 10px;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
