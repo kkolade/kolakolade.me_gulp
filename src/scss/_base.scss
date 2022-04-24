@@ -2,92 +2,111 @@
 //------HELPERS-------
 //====================
 
-// -------------------
-// ------MIXINS-------
-// -------------------
-
-@mixin google-font($font, $weight) {
-  $font: unquote($font);
-  @import url("https://fonts.googleapis.com/css2?family=#{$font}:wght@#{$weight}&display=swap");
-}
-
-@include google-font("lato", "100;300;400");
-// $font-primary: ;
-// -------------------
 // -----VARIABLES-----
-// -------------------
-//------Color Variables-------
-// $white: #fff;
-// $grey-dark: #333;
-// $grey-light: darken($white, 5%);
 
-// $color-map: (
-//   primary: #111,
-//   accent: #111,
-//   secondary: #222,
-//   tertiary: #333,
-//   headline: $white,
-//   menu-items: #111,
-//   text: $grey-dark,
-//   link: #111,
-//   body: $white,
-//   container: $grey-light,
-// );
-//------Font Variables-------
-// //-----FONT FAMILY-----
-// $font-primary: ;
+// ------Color Variables-------
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #333;
+$color-grey-dark: #333;
+$color-grey-light: darken($color-white, 5%);
+
+$color-map: (
+  primary: #111,
+  accent: #111,
+  secondary: #222,
+  tertiary: #333,
+  headline: $color-white,
+  menu-items: #111,
+  text: $color-grey-dark,
+  link: #111,
+  body: $color-white,
+  container: $color-grey-light,
+);
+
+// ------FONT VARIABLES-------
+
+//-----Font Family-----
+$font-primary: "Lato", Arial, sans-serif;
 // $font-secondary: ;
 // $font-tertiary: ;
-// //-----FONT WEIGHT MAP-----
-// $font-weight-map: (
-//   bold: 700,
-//   semi-bold: 600,
-//   medium: 500,
-//   regular: 400,
-//   light: 300,
-//   extra-light: 200,
-//   thin: 100,
-// );
-// //-----FONT SIZE MAP-----
-// $font-size-map: (
-//   hero: 4.8rem,
-//   h1: 3.2rem,
-//   h2: 2.4rem,
-//   h3: 1.87rem,
-//   normal: 1.6rem,
-//   small: 1.3rem,
-//   smaller: 1.2rem,
-//   big: 1.9rem,
-//   bigger: 2.1rem,
-// );
+//-----Font Weight Map-----
+$font-weight-map: (
+  extra-bold: 900,
+  black: 800,
+  bold: 700,
+  semi-bold: 600,
+  medium: 500,
+  regular: 400,
+  light: 300,
+  extra-light: 200,
+  thin: 100,
+);
+//-----Font Size Map-----
+$font-size-map: (
+  hero: 4.8rem,
+  h1: 3.2rem,
+  h2: 2.4rem,
+  h3: 1.87rem,
+  normal: 1.6rem,
+  small: 1.3rem,
+  smaller: 1.2rem,
+  big: 1.9rem,
+  bigger: 2.1rem,
+);
 // -----SPACE: MARGIN / PADDING / SIZES-----
-// -----------------------------------------
-// //------Breakpoint Variables Map-------
-// $breakpoint-map: (
-//   x-large: 1200px,
-//   large: 960px,
-//   medium: 680px,
-//   small: 480px,
-//   tiny: 320px,
-// );
 
-// $height-header: 60px;
-// $height-footer: 60px;
-// $width-content: 1140px;
+// 1400px, 1024px, 680px, 480px, 320px.
+$breakpoint-map-up: (
+  x-large: 140rem,
+  large: 102.4rem,
+  medium: 68rem,
+  small: 48rem,
+);
+
+// 1300px, 1023px, 679px, 319px.
+$breakpoint-map-down: (
+  large: 139.9rem,
+  medium: 102.3rem,
+  small: 67.9rem,
+);
+
+//-----HEIGHT & WIDTH VARIABLES-----
+$height-header: 6rem;
+$height-footer: 6rem;
+$width-content-lg: 82%;
+$width-content-md: 90%;
+$width-content-sm: 114rem;
+
+// $width-content-lg: 114rem;
+// $width-content-md: 114rem;
+// $width-content-sm: 114rem;
 
 //-----SPACE VARIABLES-----
+// rems
+$sp-0-25: 0.25rem;
+$sp-0-5: 0.5rem;
+$sp-0-75: 0.75rem;
+$sp-1: 1rem;
+$sp-1-25: 1.25rem;
+$sp-1-5: 1.5rem;
+$sp-2: 2rem;
+$sp-3: 3rem;
 
-// $sp-1-25: 1.25rem;
-// $sp-0-5: 0.5rem;
-// $sp-0-75: 0.75rem;
-// $sp-1: 1rem;
-// $sp-1-5: 1.5rem;
-// $sp-2: 2rem;
-// $sp-3: 3rem;
-// //-----Z-Index Variables-----
-// $z-tooltip: 10;
-// $z-fixed: 100;
-// $z-modal: 1000;
+// ems
+$spe-0-25: 0.25em;
+$spe-0-5: 0.5em;
+$spe-0-75: 0.75em;
+$spe-1: 1rem;
+$spe-1-25: 1.25em;
+$spe-1-5: 1.5em;
+$spe-2: 2em;
+$spe-3: 3em;
+
+//-----Z-INDEX VARIABLES-----
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
 
 //------Functions-------
 @function color($colr) {
@@ -102,13 +121,23 @@
   @return map-get($map: $font-size-map, $key: $size);
 }
 
+// -------------------
+// ------MIXINS-------
+// -------------------
+
+@mixin google-font($font, $weight-string) {
+  $font: unquote($font);
+  @import url("https://fonts.googleapis.com/css2?family=#{$font}:wght@#{$weight-string}&display=swap");
+}
+
+@include google-font("lato", "100;300;400");
+
 //_________________
 //------BASE-------
 //=================
 // -------------------
 // -----TYPOGRAPHY-----
 // -------------------
-// @use "1-helpers/1-helpers" as helpers;
 // @include helpers.google-font(font-name1);
 // @include helpers.google-font(font-name2);
 // or
@@ -145,20 +174,21 @@
   scroll-behavior: smooth;
 }
 
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  font-size: font(regular);
+  background-color: color(body);
+  color: color(text);
+}
 *,
 *::before,
 *::after {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
-}
-
-body {
-  // margin: 0;
-  // font-family: $font-primary;
-  // font-size: $font-normal;
-  // background-color: $color-body;
-  // color: $color-text;
 }
 
 main {
