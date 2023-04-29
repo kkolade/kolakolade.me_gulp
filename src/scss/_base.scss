@@ -13,7 +13,7 @@ $color-grey-light: darken($color-white, 15%);
 
 $color-map: (
   primary: #111,
-  accent: #111,
+  accent: #2754b7,
   secondary: #ff004f,
   tertiary: #333,
   headline: $color-white,
@@ -196,10 +196,12 @@ img {
 }
 
 /*--- REUSEABLE CLASSES ---*/
-.container,
+.container {
+  padding: 10px 10%;
+}
 .row {
-  max-width: $width-content;
-  margin: 0 auto;
+  padding: 10px 10%;
+
 }
 
 // .section {
