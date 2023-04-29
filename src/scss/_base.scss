@@ -7,20 +7,20 @@
 // ------Color Variables-------
 $color-white: #fff;
 $color-black: #000;
-$color-grey: #333;
-$color-grey-dark: #333;
-$color-grey-light: darken($color-white, 5%);
+$color-grey: #777;
+$color-grey-dark: darken($color-grey, 25%);
+$color-grey-light: darken($color-white, 15%);
 
 $color-map: (
   primary: #111,
   accent: #111,
-  secondary: #222,
+  secondary: #ff004f,
   tertiary: #333,
   headline: $color-white,
   menu-items: #111,
-  text: $color-grey-dark,
+  text: $color-white,
   link: #111,
-  body: $color-white,
+  body: #080808,
   container: $color-grey-light,
 );
 
@@ -130,7 +130,7 @@ $z-modal: 1000;
   @import url("https://fonts.googleapis.com/css2?family=#{$font}:wght@#{$weight-string}&display=swap");
 }
 
-@include google-font("lato", "100;300;400");
+@include google-font("lato", "100;300;400,500,600");
 
 //_________________
 //------BASE-------
