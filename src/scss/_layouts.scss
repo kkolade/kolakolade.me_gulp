@@ -75,6 +75,7 @@
 .about {
   padding: 80px 0;
   color: b.color(text-2);
+  position: relative;
 
   &__col-1 {
     flex-basis: 35%;
@@ -89,8 +90,13 @@
     flex-basis: 60%;
   }
 
+  &__headline {
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
   &__description {
-    margin-top: 2rem;
+    font-size: b.font-size(small);
   }
 
   &__tab {
@@ -132,11 +138,62 @@
     }
   }
 
-  &__tab-contents {
+  &__tab-content {
     display: none;
 
     &.active {
       display: block;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    color: b.color(text-4);
+    }
+
+    &__popup {
+      width: 60vw;
+      height: 75vh;
+      background-color: b.color(text);
+      margin: 8rem auto;
+      padding: 5rem;
+      border-radius: 1rem;
+      position: relative;
+
+&__close {
+  color: b.color(secondary);
+  font-size: b.font-size(bigger);
+  cursor: pointer;
+  position: absolute;
+  top: b.$sp-1-25;
+  right: b.$sp-1-25 * 2;
+}
+
+&__header {
+  display: flex;
+}
+
+&__img {
+  margin-top: b.$sp-1-5;
+  width: b.$sp-1-25 * 6;
+  height: b.$sp-1-25 * 6;
+  border-radius: b.$sp-0-5;
+}
+
+    &__title,
+    &__headline {
+      color: b.color(text-4);
+      margin-left: b.$sp-1-25;
+    }
+
+    &__description {
+      font-size: b.font-size(small);
+      margin-top: b.$sp-1-25;
     }
   }
 }

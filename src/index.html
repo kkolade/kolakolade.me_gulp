@@ -22,7 +22,7 @@
   </ul>
 </nav>
 <div class="hero__text-content">
-  <p><span class="mov"> </span></p>
+  <p><span id="typewriter"></span></p>
   <h1>Hi I'm <span>Kola</span><br>from Lagos<span class="accent">,</span> Nigeria<span class="accent">.</span></h1>
   
 </div>
@@ -35,26 +35,16 @@
           </div>
           <div class="about__col-2">
             <h1 class="about__title section__sub-title">About Me</h1>
-            <p class="about__description">Full Stack Developer - JavaScript | Ruby-on-Rails| Entrepreneur | Founder</p>
+            <p class="about__headline"> A Full Stack Developer : JavaScript | Ruby-on-Rails| Entrepreneur | Founder</p>
 
-              <p>As a full-stack developer, I help startups and small businesses to realize their vision. Is it a Prototype, MVP, or Product idea? I use Ruby, Ruby-on-Rails, and JavaScript technologies and frameworks like React.js, Next.js, Node, Typescript, etc. to breathe life into visions and thereby create reality. I will love to participate in your next project, feel free to contact me.</p>
-              <div class="hidden">
-              <p>I am a full-time student at a dynamic fast pace coding bootcamp, honing my skills as I spent around 8 hours collaborating with colleagues from different backgrounds and cultures. In the couple of months spent in the bootcamp, I have developed competency in the following areas:</p>
-               <ul>
-                <li> - Front-end development: Vanilla JavaScript | ReactJS | NextJS | Wordpress</li>
-                <li> - Back-end development: NodeJS | ExpressJS | GraphQL | Ruby on Rails</li>
-                <li> - Databases: Postgres | MongoDB | MySql</li>
-                <li> - Mobile development: ReactNative</li>
-                <li>- Styling: Styled-components | SASS | CSS-in-JS | MaterialUI | Bootstrap | TailwindCSS</li>
-               </ul>
-              I am open for exploring exciting full-stack development opportunities in startups as well as companies with scale.</p>
-            </div>
+              <p class="about__description">As a full-stack developer, I help startups and small businesses to realize their vision. Is it a Prototype, MVP, or Product idea? I use Ruby, Ruby-on-Rails, and JavaScript technologies and frameworks like React.js, Next.js, Node, Typescript, etc. to breathe life into visions and thereby create reality. I will love to participate in your next project, feel free to contact me. <button class="about__more btn--trans">...more</button></p>
+             
             <div class="about__tab-titles">
-              <article class="about__tab-link active" onclick="opentab('skills')">Skills</article>
-              <article class="about__tab-link" onclick="opentab('experience')">Experience</article>
-              <article class="about__tab-link" onclick="opentab('education')">Education</article>
+              <p class="about__tab-link active">Skills</p>
+              <p class="about__tab-link">Experience</p>
+              <p class="about__tab-link">Education</p>
             </div>
-            <div class="about__tab-contents active" id="skills`">
+            <div class="about__tab-content active" id="skills">
               <ul class="about__nav">
                 <li class="about__links">
                   <span class="about__links__items">Web Development</span><br>
@@ -71,7 +61,7 @@
                 </li>
               </ul>
             </div>
-            <div class="about__tab-contents" id="experience">
+            <div class="about__tab-content" id="experience">
               <ul class="about__nav">
                 <li class="about__links">
                   <span class="about__links__items">2021 - Current</span><br>
@@ -92,7 +82,7 @@
                 </li>
               </ul>
             </div>
-            <div class="about__tab-contents" id="education">
+            <div class="about__tab-content" id="education">
               <ul class="about__nav">
                 <li class="about__links">
                   <span class="about__links__items">1988 - 2006</span><br>
@@ -115,34 +105,49 @@
           </div>
           </div>
       </div>
+      <div class="about__overlay hidden">
+        <div class="about__popup">
+          <span class="about__popup__close">x</span>
+          <div class="about__popup__header">
+          <img src="./images/kolakolade_5.png" alt="" class="about__popup__img">
+          <div class="about__popup__header-text">
+          <h1 class="about__popup__title section__sub-title">Kola Kolade</h1>
+          <p class="about__popup__headline">Full Stack Developer : JavaScript | Ruby-on-Rails| Entrepreneur | Founder</p>
+        </div>
+        
+        </div>
+        <p class="about__popup__description">As a full-stack developer, I help startups and small businesses to realize their vision. Is it a Prototype, MVP, or Product idea? I use Ruby, Ruby-on-Rails, and JavaScript technologies and frameworks like React.js, Next.js, Node, Typescript, etc. to breathe life into visions and thereby create reality. I will love to participate in your next project, feel free to contact me.</p>
+           &nbsp;   
+        <p>I am currently a full-time student at a dynamic fast pace coding bootcamp, honing my skills as I spent around 8 hours collaborating with colleagues from different backgrounds and cultures. In the couple of months spent in the bootcamp, I have developed competency in the following areas:</p>
+        &nbsp; 
+        <ul>
+          <li> - Front-end development: Vanilla JavaScript | ReactJS | NextJS | Wordpress</li>
+          <li> - Back-end development: NodeJS | ExpressJS | GraphQL | Ruby on Rails</li>
+          <li> - Databases: Postgres | MongoDB | MySql</li>
+          <li> - Mobile development: ReactNative</li>
+          <li>- Styling: Styled-components | SASS | CSS-in-JS | MaterialUI | Bootstrap | TailwindCSS</li>
+          &nbsp;  
+        </ul>
+         
+        I am open for exploring exciting full-stack development opportunities in startups as well as companies with scale.</p>
+      
+        </div>
+            
+
+             
+        </div>
+      </div>
     </section>
-    
+     <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-    var typed = new Typed(".mov",{
-    strings: [,  "Full Stack Web Developer","Mobile App Developer","Wordpress Developer", "Tech Enthusiast"] ,
-    typeSpeed: 60,
-    backSpeed: 100,
-    loop: true
-
-    })
-</script>
-<script>
-  var tabLinks = document.getElementsByClassName('about__tab-link')
-  var tabContents = document.getElementsByClassName('about__tab-contents')
-
-  function opentab(tabname) {
-    for(tablink of tabLinks){
-tablink.classList.remove('active')
-    }
-    
-    for(tabcontent of tabContents){
-tablink.classList.remove('active')
-    }
-    e.currentTarget.classList.add('active')
-    document.getElementById(tabname).classList.add('active')
-  }
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#typewriter', {
+      strings: ['Full Stack Web Developer', 'Mobile App Developer', 'Wordpress Developer', 'Tech Enthusiast'],
+      typeSpeed: 50,
+      loop: true
+    });
   </script>
     <script src="./js/app.js"></script>
   </body>
