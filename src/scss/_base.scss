@@ -27,9 +27,8 @@ $color-map: (
 // ------FONT VARIABLES-------
 
 //-----Font Family-----
-$font-primary: "Lato", Arial, sans-serif;
-// $font-secondary: ;
-// $font-tertiary: ;
+$font-primary: "Poppins", Arial, sans-serif;
+
 //-----Font Weight Map-----
 $font-weight-map: (
   extra-bold: 900,
@@ -72,15 +71,11 @@ $breakpoint-map-down: (
 );
 
 //-----HEIGHT & WIDTH VARIABLES-----
-$height-header: 6rem;
+$height-header: 100vh;
 $height-footer: 6rem;
 $width-content-lg: 82%;
 $width-content-md: 90%;
 $width-content-sm: 114rem;
-
-// $width-content-lg: 114rem;
-// $width-content-md: 114rem;
-// $width-content-sm: 114rem;
 
 //-----SPACE VARIABLES-----
 // rems
@@ -130,7 +125,7 @@ $z-modal: 1000;
   @import url("https://fonts.googleapis.com/css2?family=#{$font}:wght@#{$weight-string}&display=swap");
 }
 
-@include google-font("lato", "100;300;400,500,600");
+
 
 //_________________
 //------BASE-------
@@ -138,20 +133,7 @@ $z-modal: 1000;
 // -------------------
 // -----TYPOGRAPHY-----
 // -------------------
-// @include helpers.google-font(font-name1);
-// @include helpers.google-font(font-name2);
-// or
-// @import url();
-// @font-face {
-//   font-family: "fontName";
-//   font-weight: "400";
-//   src: url("./fonts/fontName-normal.ttf"); //IE-9 Compat Modes
-//   src: url("./fonts/fontName-normal.ttf") format("embeded-opentype"),
-//     url("./fonts/fontName-normal.ttf") format("woff"),
-//     url("./fonts/fontName-normal.ttf") format("woff2"),
-//     url("./fonts/fontName-normal.ttf") format("truetype"),
-//     url("./fonts/fontName-normal.ttf") format("svg");
-// }
+@include google-font("poppins", "100;300;400,500,600");
 
 // Common weight name mapping
 // 100 - thin
@@ -198,13 +180,6 @@ h1 {
   margin: 0.67rem 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  padding: 0;
-}
-
 ul {
   list-style: none;
 }
@@ -221,11 +196,11 @@ img {
 }
 
 /*--- REUSEABLE CLASSES ---*/
-// .container,
-// .row {
-//   max-width: $width-content;
-//   margin: 0 auto;
-// }
+.container,
+.row {
+  max-width: $width-content;
+  margin: 0 auto;
+}
 
 // .section {
 //   padding: $sp-2;
