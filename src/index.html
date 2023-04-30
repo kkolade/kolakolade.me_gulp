@@ -22,7 +22,7 @@
   </ul>
 </nav>
 <div class="hero__text-content">
-  <p><span id="typewriter"></span></p>
+  <p><span id="typewriter" class="hero__text-content__typewriter"></span></p>
   <h1>Hi I'm <span>Kola</span><br>from Lagos<span class="accent">,</span> Nigeria<span class="accent">.</span></h1>
   
 </div>
@@ -54,16 +54,16 @@
               <ul class="about__nav">
                 <li class="about__links">
                   <span class="about__links__items">Web Development</span><br>
-                  Back-end Web Development
+                  - Front-end Web Development | Back-end Web Development | Databases
                   
                 </li>
                 <li class="about__links">
                   <span class="about__links__items">Mobile App</span><br>
-                  UI/UX
+                  - App Design | App Development | Android & IOS
                 </li>
                 <li class="about__links">
                   <span class="about__links__items">Wordpress</span><br>
-                  UI/UX
+                  - Website Design & Development | Optimization | SEO
                 </li>
               </ul>
             </div>
@@ -91,20 +91,21 @@
             <div class="about__tab-content" id="education">
               <ul class="about__nav">
                 <li class="about__links">
-                  <span class="about__links__items">1988 - 2006</span><br>
-                  Obafemi Awolowo University, Ile-Ife<br>
-                  Metallurgical & Materials Engineering 
+                  <span class="about__links__items">10/2022 - Current</span><br>
+                  Microverse<br>
+                  - Full Stack web Developer 
                 </li>
                 <li class="about__links">
-                  <span class="about__links__items">1988 - 2006</span><br>
-                  Obafemi Awolowo University, Ile-Ife<br>
-                  Metallurgical & Materials Engineering 
+                  <span class="about__links__items">04/2009 - 10/2009</span><br>
+                  Fate Foundation<br>
+                  - Entrepreneurship 
                 </li>
                 <li class="about__links">
-                  <span class="about__links__items">1988 - 2006</span><br>
+                  <span class="about__links__items">12/1988 - 9/2004</span><br>
                   Obafemi Awolowo University, Ile-Ife<br>
-                  Metallurgical & Materials Engineering 
+                  - Metallurgical & Materials Engineering 
                 </li>
+                
               </ul>
             </div>
             <div style="display: flex; align-items: flex-start;"><img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/redux-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/sass-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/webpack-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/prettier-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/jest-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/restapi-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="icon" width="53" height="53" /><img src="https://techstack-generator.vercel.app/github-icon.svg" alt="icon" width="53" height="53" /></div>
@@ -122,20 +123,17 @@
         </div>
         
         </div>
-        <p class="about__popup__description">As a full-stack developer, I help startups and small businesses to realize their vision. Is it a Prototype, MVP, or Product idea? I use Ruby, Ruby-on-Rails, and JavaScript technologies and frameworks like React.js, Next.js, Node, Typescript, etc. to breathe life into visions and thereby create reality. I will love to participate in your next project, feel free to contact me.</p>
-           &nbsp;   
-        <p>I am currently a full-time student at a dynamic fast pace coding bootcamp, honing my skills as I spent around 8 hours collaborating with colleagues from different backgrounds and cultures. In the couple of months spent in the bootcamp, I have developed competency in the following areas:</p>
-        &nbsp; 
-        <ul>
+        <p class="about__popup__description about__popup__description-text">As a full-stack developer, I help startups and small businesses to realize their vision. Is it a Prototype, MVP, or Product idea? I use Ruby, Ruby-on-Rails, and JavaScript technologies and frameworks like React.js, Next.js, Node, Typescript, etc. to breathe life into visions and thereby create reality. I will love to participate in your next project, feel free to contact me.</p>
+        <p class="about__popup__description-text">I am currently a full-time student at a dynamic fast pace coding bootcamp, honing my skills as I spent around 8 hours collaborating with colleagues from different backgrounds and cultures. In the couple of months spent in the bootcamp, I have developed competency in the following areas:</p>
+        <ul class="about__popup__description-text">
           <li> - Front-end development: Vanilla JavaScript | ReactJS | NextJS | Wordpress</li>
           <li> - Back-end development: NodeJS | ExpressJS | GraphQL | Ruby on Rails</li>
           <li> - Databases: Postgres | MongoDB | MySql</li>
           <li> - Mobile development: ReactNative</li>
-          <li>- Styling: Styled-components | SASS | CSS-in-JS | MaterialUI | Bootstrap | TailwindCSS</li>
-          &nbsp;  
-        </ul>
-         
-        I am open for exploring exciting full-stack development opportunities in startups as well as companies with scale.</p>
+          <li> - Styling: Styled-components | SASS | CSS-in-JS | MaterialUI | Bootstrap | TailwindCSS</li>
+          <li> - Communication Skills, Collaboration, Remote Working, Working with Cross-cultural Teams</li>  
+        </ul>         
+        <p class="about__popup__description-text"> I am open for exploring exciting full-stack development opportunities in startups as well as companies with scale.</p>
       
         </div>
             
@@ -151,7 +149,8 @@
   <script>
     var typed = new Typed('#typewriter', {
       strings: ['Full Stack Web Developer', 'Mobile App Developer', 'Wordpress Developer', 'Tech Enthusiast'],
-      typeSpeed: 50,
+      typeSpeed: 100,
+      backSpeed: 50,
       loop: true
     });
   </script>
