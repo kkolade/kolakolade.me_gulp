@@ -63,7 +63,7 @@
       background: b.color(secondary);
       position: absolute;
       left: 0;
-      bottom: -b.$sp-0-s5;
+      bottom: - b.$sp-0-75;
       transition: 0.25s;
     }
 
@@ -123,7 +123,7 @@
         background: b.color(secondary);
         position: absolute;
         left: 0;
-        bottom: b.$sp-0-75;
+        bottom: - b.$sp-0-75;
         transition: 0.5s;
       }
 
@@ -150,7 +150,7 @@
     }
   }
 }
-//------Popup-------
+/*------Popup-------*/
 .about {
   &__overlay {
     position: absolute;
@@ -212,8 +212,17 @@
   }
 }
 
+/*------Services-------*/
+.Services {
+  padding: b.$sp-3 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(b.$sp-3 *8, 1fr));
+  }
+}
+
 //---Section= Section_Name----
 
-//------Aside-------
 
 //------Footer-------
