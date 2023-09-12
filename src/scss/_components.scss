@@ -5,6 +5,23 @@
 //------Alert-------
 
 //------Button-------
+.btn {
+  display: inline-block;
+  color: b.$color-white;
+  background-color: b.color(secondary);
+  border: 2px solid b.color(secondary);
+  font-size: b.font-size(bigger);
+  font-weight: b.font-weight(semi-bold);
+  padding: b.$spe-0-5 b.$spe-2;
+  border-radius: b.$sp-3;
+  text-align: center;
+
+  &:hover{
+    color: b.color(secondary);
+    background-color: transparent;
+  }
+}
+
 .btn--trans {
   display: inline-block;
   color: b.color(secondary);
