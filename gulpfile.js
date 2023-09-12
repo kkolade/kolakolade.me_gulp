@@ -71,6 +71,16 @@ function fonts() {
 }
 exports.fonts = fonts;
 
+// Font Awesome processing
+function icons() {
+  const out = build + "webfonts/"
+
+  return gulp
+    .src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+    .pipe(gulp.dest(out))
+}
+exports.icons = icons;
+
 // HTML processing
 function html() {
   const out = build;
@@ -81,7 +91,7 @@ function html() {
     .pipe(devBuild ? noop() : htmlclean())
     .pipe(gulp.dest(out));
 }
-exports.html = gulp.series(images, html);
+exports.html = gulp.series(images, icons, html);
 
 // JavaScript processing
 function js() {
@@ -159,7 +169,7 @@ function scss() {
     .pipe(sourcemaps ? sourcemaps.write() : noop())
     .pipe(gulp.dest(out));
 }
-exports.scss = gulp.series(images, fonts, css, scss);
+exports.scss = gulp.series(images, icons, fonts, css, scss);
 
 // Clean build
 function cleanBuild() {
