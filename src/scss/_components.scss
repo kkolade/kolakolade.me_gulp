@@ -1,6 +1,6 @@
 @use "base" as b;
 
-/*--- COMPONENTS ---*/
+/* --- COMPONENTS --- */
 
 //------Alert-------
 
@@ -16,7 +16,7 @@
   border-radius: b.$sp-3;
   text-align: center;
 
-  &:hover{
+  &:hover {
     color: b.color(secondary);
     background-color: transparent;
   }

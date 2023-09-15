@@ -30,7 +30,7 @@ $color-map: (
 // ------FONT VARIABLES-------
 
 //-----Font Family-----
-$font-primary: "Poppins", Arial, sans-serif;
+$font-primary: "Poppins", arial, sans-serif;
 
 //-----Font Weight Map-----
 $font-weight-map: (
@@ -46,8 +46,8 @@ $font-weight-map: (
 );
 //-----Font Size Map-----
 $font-size-map: (
-  hero: 5.5rem,
-  h1: 5rem,
+  hero: 5rem,
+  h1: 4rem,
   h2: 2.4rem,
   h3: 1.87rem,
   normal: 1.6rem,
@@ -125,10 +125,9 @@ $z-modal: 1000;
 
 @mixin google-font($font, $weight-string) {
   $font: unquote($font);
+
   @import url("https://fonts.googleapis.com/css2?family=#{$font}:wght@#{$weight-string}&display=swap");
 }
-
-
 
 //_________________
 //------BASE-------
@@ -137,15 +136,17 @@ $z-modal: 1000;
 // -----TYPOGRAPHY-----
 // -------------------
 @include google-font("poppins", "100;300;400,500,600");
+
 @font-face {
-    font-family: "Veteran Typewriter";
-    font-weight: "400";
-    src: url("../fonts/"); //IE-9 Compat Modes
-    src: url("../fonts/veteran_typewriter.ttf") format("embeded-opentype"),
-      url("../fonts/veteran_typewriter.ttf") format("woff"),
-      url("../fonts/veteran_typewriter.ttf") format("woff2"),
-      url("../fonts/veteran_typewriter.ttf") format("truetype"),
-      url("../fonts/veteran_typewriter.ttf") format("svg");
+  font-family: "Veteran Typewriter";
+  font-weight: "400";
+  src: url("../fonts/"); //IE-9 Compat Modes
+  src:
+    url("../fonts/veteran_typewriter.ttf") format("embeded-opentype"),
+    url("../fonts/veteran_typewriter.ttf") format("woff"),
+    url("../fonts/veteran_typewriter.ttf") format("woff2"),
+    url("../fonts/veteran_typewriter.ttf") format("truetype"),
+    url("../fonts/veteran_typewriter.ttf") format("svg");
 }
 
 // Common weight name mapping
@@ -178,6 +179,7 @@ body {
   background-color: color(body);
   color: color(text);
 }
+
 *,
 *::before,
 *::after {
@@ -208,10 +210,11 @@ img {
   border-style: none;
 }
 
-/*--- REUSEABLE CLASSES ---*/
+/* --- REUSEABLE CLASSES --- */
 .container {
   padding: 10px 10%;
 }
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -233,7 +236,7 @@ img {
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: .25s;
+    transition: 0.25s;
   }
 }
 
@@ -247,8 +250,6 @@ img {
 // .section__title {
 //   font-size: $font-h2;
 // }
-
-
 
 // .section__title,
 // .section__sub-title {

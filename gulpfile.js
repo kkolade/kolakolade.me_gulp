@@ -1,41 +1,41 @@
 // Gulp.js configuration
 
 const // modules
-  gulp = require("gulp"),
+  gulp = require('gulp');
   // other modules
-  autoprefixer = require("gulp-autoprefixer"),
-  babel = require("gulp-babel"),
-  browserSync = require("browser-sync").create(),
-  clean = require("gulp-clean"),
-  cleancss = require("gulp-clean-css"),
-  concat = require("gulp-concat"),
-  deporder = require("gulp-deporder"),
-  htmlclean = require("gulp-htmlclean"),
-  imagemin = require("gulp-imagemin"),
-  jpegRecompress = require("imagemin-jpeg-recompress"),
-  newer = require("gulp-newer"),
-  noop = require("gulp-noop"),
-  pngQuant = require("imagemin-pngquant"),
-  uglify = require("gulp-uglify"),
-  rename = require("gulp-rename"),
-  sass = require("gulp-sass")(require("sass")),
-  terser = require("gulp-terser"),
-  purgeCSS = require("gulp-purgecss"),
-  // development mode?
-  devBuild = process.env.NODE_ENV !== "production",
-  // modules continued...
-  stripdebug = devBuild ? null : require("gulp-strip-debug"),
-  sourcemaps = devBuild ? require("gulp-sourcemaps") : null,
-  // folders
-  src = "src/",
-  build = "build/";
+const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const browserSync = require('browser-sync').create();
+const clean = require('gulp-clean');
+const cleancss = require('gulp-clean-css');
+const concat = require('gulp-concat');
+const deporder = require('gulp-deporder');
+const htmlclean = require('gulp-htmlclean');
+const imagemin = require('gulp-imagemin');
+const jpegRecompress = require('imagemin-jpeg-recompress');
+const newer = require('gulp-newer');
+const noop = require('gulp-noop');
+const pngQuant = require('imagemin-pngquant');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass')(require('sass'));
+const terser = require('gulp-terser');
+const purgeCSS = require('gulp-purgecss');
+// development mode?
+const devBuild = process.env.NODE_ENV !== 'production';
+// modules continued...
+const stripdebug = devBuild ? null : require('gulp-strip-debug');
+const sourcemaps = devBuild ? require('gulp-sourcemaps') : null;
+// folders
+const src = 'src/';
+const build = 'build/';
 
 // image processing
 function images() {
-  const out = build + "images/";
+  const out = `${build}images/`;
 
   return gulp
-    .src(src + "images/**/*")
+    .src(`${src}images/**/*`)
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -54,7 +54,7 @@ function images() {
         ]),
         pngQuant(),
         jpegRecompress(),
-      ]).pipe(newer(out))
+      ]).pipe(newer(out)),
     )
     .pipe(gulp.dest(out));
 }
@@ -62,10 +62,10 @@ exports.images = images;
 
 // fonts processing
 function fonts() {
-  const out = build + "fonts/";
+  const out = `${build}fonts/`;
 
   return gulp
-    .src(src + "fonts/**/*")
+    .src(`${src}fonts/**/*`)
     .pipe(newer(out))
     .pipe(gulp.dest(out));
 }
@@ -73,11 +73,11 @@ exports.fonts = fonts;
 
 // Font Awesome processing
 function icons() {
-  const out = build + "webfonts/"
+  const out = `${build}webfonts/`;
 
   return gulp
     .src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-    .pipe(gulp.dest(out))
+    .pipe(gulp.dest(out));
 }
 exports.icons = icons;
 
@@ -86,7 +86,7 @@ function html() {
   const out = build;
 
   return gulp
-    .src(src + "/*.html")
+    .src(`${src}/*.html`)
     .pipe(newer(out))
     .pipe(devBuild ? noop() : htmlclean())
     .pipe(gulp.dest(out));
@@ -95,19 +95,19 @@ exports.html = gulp.series(images, icons, html);
 
 // JavaScript processing
 function js() {
-  const out = build + "js/";
+  const out = `${build}js/`;
 
   return gulp
-    .src(src + "js/**/*")
+    .src(`${src}js/**/*`)
     .pipe(
       babel({
-        presets: ["@babel/preset-env"],
-      })
+        presets: ['@babel/preset-env'],
+      }),
     )
     .pipe(sourcemaps ? sourcemaps.init() : noop())
     .pipe(deporder())
     .pipe(uglify())
-    .pipe(concat("app.js"))
+    .pipe(concat('app.js'))
     .pipe(stripdebug ? stripdebug() : noop())
     .pipe(terser())
     .pipe(sourcemaps ? sourcemaps.write() : noop())
@@ -117,19 +117,19 @@ exports.js = js;
 
 // CSS processing
 function css() {
-  const out = build + "css/";
+  const out = `${build}css/`;
 
   return gulp
-    .src(src + "css/**/*")
+    .src(`${src}css/**/*`)
     .pipe(sourcemaps ? sourcemaps.init() : noop())
-    .pipe(cleancss({ compatibility: "ie8" }))
-    .pipe(concat("style.css"))
+    .pipe(cleancss({ compatibility: 'ie8' }))
+    .pipe(concat('style.css'))
     .pipe(
       purgeCSS({
-        content: ["build/**/*.html"],
-      })
+        content: ['build/**/*.html'],
+      }),
     )
-    .pipe(rename({ suffix: ".min" }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps ? sourcemaps.write() : noop())
     .pipe(gulp.dest(out));
 }
@@ -137,34 +137,34 @@ exports.css = css;
 
 // SCSS processing
 function scss() {
-  const out = build + "css/";
+  const out = `${build}css/`;
 
   return gulp
-    .src(src + "scss/main.scss")
+    .src(`${src}scss/main.scss`)
     .pipe(sourcemaps ? sourcemaps.init() : noop())
     .pipe(
       sass({
-        outputStyle: "expanded",
-        imagePath: "/images/",
+        outputStyle: 'expanded',
+        imagePath: '/images/',
         precision: 3,
         errLogToConsole: true,
-      }).on("error", sass.logError)
+      }).on('error', sass.logError),
     )
     .pipe(
       autoprefixer({
         overrideBrowserslist: [
-          "> 1%",
-          "ie >= 9",
-          "edge >= 15",
-          "ie_mob >= 10",
-          "ff >= 45",
-          "chrome >= 45",
-          "safari >= 7",
-          "opera >= 23",
-          "ios >= 7",
-          "android >= 4",
+          '> 1%',
+          'ie >= 9',
+          'edge >= 15',
+          'ie_mob >= 10',
+          'ff >= 45',
+          'chrome >= 45',
+          'safari >= 7',
+          'opera >= 23',
+          'ios >= 7',
+          'android >= 4',
         ],
-      })
+      }),
     )
     .pipe(sourcemaps ? sourcemaps.write() : noop())
     .pipe(gulp.dest(out));
@@ -182,15 +182,15 @@ exports.build = gulp.parallel(
   exports.html,
   exports.css,
   exports.scss,
-  exports.js
+  exports.js,
 );
 
 // Browsersync task
 function synch(done) {
   browserSync.init({
     server: {
-      baseDir: "./build",
-      index: "index.html",
+      baseDir: './build',
+      index: 'index.html',
     },
     port: 3000,
     notify: false,
@@ -201,22 +201,22 @@ function synch(done) {
 // watch for file changes
 function watchFiles(done) {
   // image changes
-  gulp.watch(src + "images/**/*", images);
+  gulp.watch(`${src}images/**/*`, images);
 
   // fonts changes
-  gulp.watch(src + "fonts/**/*", fonts);
+  gulp.watch(`${src}fonts/**/*`, fonts);
 
   // css changes
-  gulp.watch(src + "css/**/*", css);
+  gulp.watch(`${src}css/**/*`, css);
 
   // html changes
-  gulp.watch(src + "*.html", html).on("change", browserSync.reload);
+  gulp.watch(`${src}*.html`, html).on('change', browserSync.reload);
 
   // scss changes
-  gulp.watch(src + "scss/**/*", scss).on("change", browserSync.reload);
+  gulp.watch(`${src}scss/**/*`, scss).on('change', browserSync.reload);
 
   // js changes
-  gulp.watch(src + "js/**/*", js).on("change", browserSync.reload);
+  gulp.watch(`${src}js/**/*`, js).on('change', browserSync.reload);
 
   done();
 }
