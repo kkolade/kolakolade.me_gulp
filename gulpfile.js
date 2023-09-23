@@ -81,6 +81,16 @@ function icons() {
 }
 exports.icons = icons;
 
+// PDF processing
+function pdf() {
+  const out = `${build}docs/`;
+
+  return gulp
+    .src(`${src}docs/*.pdf`)
+    .pipe(gulp.dest(out));
+}
+exports.pdf = pdf;
+
 // HTML processing
 function html() {
   const out = build;
@@ -91,7 +101,7 @@ function html() {
     .pipe(devBuild ? noop() : htmlclean())
     .pipe(gulp.dest(out));
 }
-exports.html = gulp.series(images, icons, html);
+exports.html = gulp.series(images, icons, html, pdf);
 
 // JavaScript processing
 function js() {

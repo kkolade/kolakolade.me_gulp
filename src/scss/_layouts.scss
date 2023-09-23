@@ -266,6 +266,27 @@
     color: b.color(secondary);
     margin-right: b.$sp-1;
   }
+
+  .social {
+    margin-top: b.$sp-1-5 * 2;
+    &-icon {
+      font-size: b.font-size(bigger);
+      margin-right: b.$sp-1-25;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &__cv {
+    margin-top: b.$sp-1-5 * 2;
+    background-color: b.color(secondary);
+     &:hover {
+      color: b.color(secondary);
+      background-color: transparent;
+     }
+  }
 }
 
 //------Footer-------
