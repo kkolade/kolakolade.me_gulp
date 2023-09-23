@@ -258,11 +258,14 @@
     margin-top: b.$sp-2;
   }
 
-  &__card{
-    height: 60vh;
-    padding-top: b.$sp;
-    border: 1px solid b.color(secondary);
+  &__work {
+
+    &__image {
+      border-radius: b.$sp-0-75;
+    }
+    
   }
+
 }
 
 //---Section= Section_Name----
