@@ -22,6 +22,16 @@
   }
 }
 
+.btn--secondary {
+  @extend .btn;
+  
+  display: block;
+  width: fit-content;
+  color: b.color(secondary);
+  background-color: transparent;
+  border-radius: b.$sp-0-5;
+}
+
 .btn--trans {
   display: inline-block;
   color: b.color(secondary);
