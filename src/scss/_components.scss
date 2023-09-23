@@ -1,22 +1,14 @@
 @use "base" as b;
 
 /* --- COMPONENTS --- */
-.hero {
-  &__cta {
-    margin-top: b.$sp-1;
-  }
-
-  &__social {
-    margin-top: b.$sp-3 * 4;
-
+.social {
     &__link {
-      color: b.color(white);
+      color: b.color(text);
     }
 
-    &__icon {
+    &-icon {
       display: inline-block;
-      margin-right: b.$sp-2;
-      color: b.color(white);
+      color: b.color(text);
       width: b.$sp-2;
       height: b.$sp-0-75;
       transition: all 0.3s;
@@ -31,7 +23,7 @@
       }
     }
   }
-}
+
 
 //------Alert-------
 
@@ -78,6 +70,68 @@
   font-size: b.font-size(normal);
   margin-left: 1rem;
   cursor: pointer;
+}
+
+/* ------Popup------- */
+.about {
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000, $alpha: 0.5);
+    color: b.color(text-4);
+  }
+
+  &__popup {
+    width: 60vw;
+    height: 75vh;
+    background-color: b.color(text);
+    margin: b.$sp-1 * 8 auto;
+    padding: b.$spe-1-25 * 4;
+    border-radius: b.$sp-1;
+    position: relative;
+
+    &__close {
+      color: b.color(secondary);
+      font-size: b.font-size(bigger);
+      cursor: pointer;
+      position: absolute;
+      top: b.$sp-1-25;
+      right: b.$sp-1-25 * 2;
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__img {
+      margin-top: b.$sp-1-5;
+      width: b.$sp-1-25 * 6;
+      height: b.$sp-1-25 * 6;
+      border-radius: b.$sp-0-5;
+    }
+
+    &__title,
+    &__headline {
+      color: b.color(text-4);
+      margin-left: b.$sp-1-25;
+    }
+
+    &__headline {
+      margin-top: b.$sp-0-5;
+    }
+
+    &__description {
+      font-size: b.font-size(small);
+      margin-top: b.$sp-1-25;
+
+      &-text {
+        margin-bottom: b.$sp-0-75;
+      }
+    }
+  }
 }
 //------Carousel-------
 
