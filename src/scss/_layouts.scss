@@ -38,35 +38,6 @@
     font-size: b.font-size(normal) * 1.2;
     margin: b.$sp-1;
   }
-
-  &__cta {
-    margin-top: b.$sp-1;
-  }
-
-  &__social {
-    margin-top: b.$sp-3 * 4;
-
-    &__link {
-      color: b.color(white);
-    }
-
-    &__icon {
-      display: inline-block;
-      margin-right: b.$sp-2;
-      color: b.color(white);
-      width: b.$sp-2;
-      height: b.$sp-0-75;
-
-      &:hover {
-        color: b.color(secondary);
-        transform: scale(1.2);
-      }
-
-      &:active {
-        transform: translateY(-2px);
-      }
-    }
-  }
 }
 
 /* ------Navigation------- */
