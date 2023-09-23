@@ -46,9 +46,10 @@
   &__social {
     margin-top: b.$sp-3 * 4;
   }
-
+  
   .social-icon {
     margin-right: b.$sp-2;
+    color: b.color(text-2);
   }
 }
 
@@ -244,6 +245,27 @@
 
 }
 
-//---Section= Section_Name----
+//---Contact----
+.contact {
+  display: flex;
+
+  &__col-1 {
+    flex-basis: 35%;
+    
+  }
+
+  &__col-2 {
+    flex-basis: 60%;
+  }
+
+  &__detail {
+    margin-top: b.$sp-1-5 *2;
+  }
+
+  .detail-icon {
+    color: b.color(secondary);
+    margin-right: b.$sp-1;
+  }
+}
 
 //------Footer-------

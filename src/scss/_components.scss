@@ -3,12 +3,12 @@
 /* --- COMPONENTS --- */
 .social {
     &__link {
-      color: b.color(text);
+      color: b.color(text-2);
     }
 
     &-icon {
       display: inline-block;
-      color: b.color(text);
+      color: b.color(text-2);
       width: b.$sp-2;
       height: b.$sp-0-75;
       transition: all 0.3s;
