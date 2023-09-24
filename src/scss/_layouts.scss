@@ -51,6 +51,10 @@
     margin-right: b.$sp-2;
     color: b.color(text-2);
   }
+
+  &__mobile__icon {
+    display: none !important; 
+  }
 }
 
 /* ------Navigation------- */
@@ -324,12 +328,75 @@
   background-image: url('../images/kolakolade_portfolio_mobile_bg.jpeg');
 
   &__text-content {
-    margin-top: 70%;
+    margin-top: 180%;
     font-size: b.font-size(normal);
 
     h1 {
       font-size: b.font-size(small) * 2;
     }
+
+    &__typewriter {
+      font-size: b.font-size(big);
+    }
+  }
+
+  &__social {
+    margin-top: b.$sp-3;
+  }
+
+  .social-icon {
+    font-size: b.font-size(normal);
+  }
+
+  /*-----Mobile Navbar-----*/
+  &__nav {
+    background-color: b.color(secondary);
+    position: fixed;
+    top: 0;
+    right: b.$sp-2 * -12;
+    width: b.$sp-2 * 12;
+    font-size: b.font-size(h2);
+    height: 100vh;
+    padding-top: b.$sp-2 * 5;
+    transition: 2s;
+  }
+
+&__list {
+  display: block;
+  margin-top: b.$sp-2;
+  z-index: 2;
+
+  &:hover {
+    background-color: lighten(b.color(secondary), 20%);
+  }
+}
+
+  &__mobile__icon{
+    display: block !important; 
+    font-size: b.font-size(h2); 
+  }
+
+  #close-menu {
+    position: absolute;
+    top: b.$sp-2;
+    left: b.$sp-2;
+  }
+}
+
+.about {
+  &__skills__icons {
+    flex-wrap: wrap;
+  }
+}
+
+.contact {
+  &__col-1 {
+    flex-basis: 100%;
+    
+  }
+
+  &__col-2 {
+    flex-basis: 100%;
   }
 }
 }

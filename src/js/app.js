@@ -37,3 +37,16 @@ aboutOverlay.addEventListener('click', (e) => {
 const now = new Date().getFullYear();
 const year = document.getElementById('year');
 year.innerText = now;
+
+// Mobile menu
+const showMenu = document.getElementById('show-menu');
+const closeMenu = document.getElementById('close-menu');
+const sideMenu = document.getElementById('side-menu');
+
+showMenu.addEventListener('click', () => {
+  sideMenu.style.right = '0';
+});
+
+closeMenu.addEventListener('click', () => {
+  sideMenu.style.right = '-24rem';
+});
