@@ -19,14 +19,14 @@
       <li class="hero__list"><a href="" class="hero__link">Home</a></li>
       <li class="hero__list"><a href="#about" class="hero__link">About</a></li>
       <li class="hero__list"><a href="#portfolio" class="hero__link">Portfolio</a></li>
-      <li class="hero__list"><a href="" class="hero__link">Contact</a></li>
+      <li class="hero__list"><a href="#contact" class="hero__link">Contact</a></li>
     </ul>
   </nav>
   <div class="hero__text-content">
     <p><span id="typewriter" class="hero__text-content__typewriter"></span></p>
     <h1>Hi there<span class="accent">,</span> I'm <span>Kola</span><br> A Full-stack Developer<span class="accent">.</span></h1>
     <!-- <p class="hero__text">Is it a Prototype, MVP or Product ideas, probably a website or mobile app?</p> -->
-    <a href="" class="hero__cta btn">Let's Talk!</a>
+    <a href="#talk" class="hero__cta btn">Let's Talk!</a>
     <div class="hero__social social-icons">
       <a class="social__link" href="https://twitter.com/kola_kolade">
         <i class="social-icon hero__link fa-brands fa-x-twitter fa-xs"></i>
@@ -208,7 +208,7 @@
 
 <!-- Contact Section -->
 <section id="contact" class="contact">
-  <div class="container">
+  <div id="talk" class="container">
     <div class="row">
       <div class="contact__col-1">
         <h1 class="section__title">Contact Me</h1>
@@ -232,17 +232,24 @@
             <i class="social-icon fa-brands fa-skype"></i>
           </a>
         </div>
+        <a href="docs/kolakolade.pdf" download class="contact__cv btn--secondary">Download CV</a>
       </div>
       <div class="contact__col-2">
         <form class="contact__form">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn">Submit</button>
+          <input class="contact__input" type="text" name="Name" placeholder="Your Name" required>
+          <input class="contact__input" type="email" name="Email" placeholder="Your Email" required>
+          <textarea class="contact__input" name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn--secondary">Submit</button>
         </form>
       </div>
     </div>
-    <a href="" class="contact__cv btn--secondary">Download CV</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="footer" id="footer">
+  <div class="footer__copyright">
+    <p class="footer__copyright__text">Made with <i class="fa-solid fa-heart"></i> by Kola Kolade. copyright &copy;<span id="year"></span></p>
   </div>
 </section>
 

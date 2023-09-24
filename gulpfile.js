@@ -213,6 +213,9 @@ function watchFiles(done) {
   // image changes
   gulp.watch(`${src}images/**/*`, images);
 
+  // pdf changes
+  gulp.watch(`${src}pdf/**/*`, pdf);
+
   // fonts changes
   gulp.watch(`${src}fonts/**/*`, fonts);
 

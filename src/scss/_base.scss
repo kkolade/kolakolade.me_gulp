@@ -13,7 +13,7 @@ $color-grey-light: darken($color-white, 15%);
 
 $color-map: (
   primary: #111,
-  accent: #2754b7,
+  accent: #262626,
   secondary: #ff004f,
   tertiary: #333,
   headline: $color-white,
@@ -119,6 +119,10 @@ $z-modal: 1000;
   @return map-get($map: $font-size-map, $key: $size);
 }
 
+@function screen-size($size) {
+  @return map-get($map: $breakpoint-map-down, $key: $size )
+}
+
 // -------------------
 // ------MIXINS-------
 // -------------------
@@ -211,6 +215,9 @@ img {
 }
 
 /* --- REUSEABLE CLASSES --- */
+section {
+  padding-bottom: $sp-3 * 2;
+}
 .container {
   padding: 10px 10%;
 }
@@ -244,7 +251,7 @@ img {
   display: none;
 }
 // .section {
-//   padding: $sp-2;
+//   padding: $sp-2* 3 0;
 // }
 
 // .section__title {

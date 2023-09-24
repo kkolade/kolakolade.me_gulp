@@ -247,8 +247,6 @@
 
 //---Contact----
 .contact {
-  display: flex;
-
   &__col-1 {
     flex-basis: 35%;
     
@@ -280,13 +278,58 @@
   }
 
   &__cv {
-    margin-top: b.$sp-1-5 * 2;
+    margin-top: b.$sp-3 * 5;
     background-color: b.color(secondary);
+
      &:hover {
       color: b.color(secondary);
       background-color: transparent;
      }
   }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: b.color(accent);
+    padding: b.$sp-1-5;
+    margin: b.$sp-1-5 0;
+    color: b.color(text);
+    font-size: b.font-size(big);
+    border-radius: b.$sp-0-5;
+  }
 }
 
 //------Footer-------
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: b.$sp-2 0;
+  background-color: b.color(accent);
+  font-weight: b.font-weight(300);
+  margin-top: b.$sp-2;
+
+  .fa-heart {
+    color: b.color(secondary);
+  }
+}
+
+//------Small Screens-------
+@media only screen and (max-width: b.screen-size(small)){
+.hero {
+  background-image: url('../images/kolakolade_portfolio_mobile_bg.jpeg');
+
+  &__text-content {
+    margin-top: 70%;
+    font-size: b.font-size(normal);
+
+    h1 {
+      font-size: b.font-size(small) * 2;
+    }
+  }
+}
+}

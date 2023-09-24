@@ -43,7 +43,12 @@
   &:hover {
     color: b.color(secondary);
     background-color: transparent;
+    box-shadow: 0px 2px 5px lighten(b.color(secondary), 60%);
   }
+
+  &:active {
+    transform: translateY(2px);
+   }
 }
 
 .btn--secondary {

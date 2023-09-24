@@ -32,3 +32,8 @@ aboutOverlay.addEventListener('click', (e) => {
     aboutOverlay.classList.add('hidden');
   }
 });
+
+// Footer Date
+const now = new Date().getFullYear();
+const year = document.getElementById('year');
+year.innerText = now;
