@@ -136,9 +136,54 @@
         margin-bottom: b.$sp-0-75;
       }
     }
+    
   }
 }
-//------Carousel-------
+//------mobile-------
+@media only screen and (max-width: b.screen-size(small)) {
+  .about {
+    &__popup{
+      width: 90vw;
+      padding: b.$sp-1-5;
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      &__img {
+        margin-top: b.$sp-1-5;
+        width: 60%;
+        height: auto;
+        margin: b.$sp-2 auto;
+        border-radius: b.$sp-0-5;
+      }
+  
+      &__title,
+      &__headline {
+        color: b.color(text-4);
+        text-align: center;
+      }
+  
+      &__headline {
+        margin-top: b.$sp-0-5;
+        font-weight: b.font-weight(bold);
+      }
+  
+      &__description {
+        font-size: b.font-size(small);
+        margin-top: b.$sp-1-25;
+        overflow-y: scroll;
+  
+        &-text {
+          margin-bottom: b.$sp-0-75;
+        }
+      }
+    }
+  }
+}
 
 //------Forms-------
 
