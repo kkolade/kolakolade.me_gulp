@@ -171,6 +171,12 @@
       display: block;
     }
   }
+
+  &__skills__icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 
@@ -345,7 +351,7 @@
   }
 
   .social-icon {
-    font-size: b.font-size(normal);
+    font-size: b.font-size(big);
   }
 
   /*-----Mobile Navbar-----*/
@@ -384,8 +390,16 @@
 }
 
 .about {
+  &__col-1, &__col-2 {
+    flex-basis: 100%;
+  }
+  
+  &__col-1 {
+    margin-bottom: b.$sp-3;
+  }
+
   &__skills__icons {
-    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
