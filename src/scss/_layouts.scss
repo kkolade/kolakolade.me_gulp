@@ -9,6 +9,7 @@
   width: 100%;
   height: 100vh;
   background-image: url('../images/kolakolade_portfolio_bg.jpeg');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 
@@ -198,7 +199,8 @@
     
     &__layer {
       width: 100%;
-      height: 0;
+      height: 100%;
+      opacity: 0;
       background: linear-gradient(rgba(0,0,0,0.6), b.color(secondary));
       border-radius: b.$sp-1;
       position: absolute;
@@ -212,10 +214,11 @@
       padding: 0 b.$sp-2 * 2;
       text-align: center;
       font-size: b.font-size(small);
-      transition: height 0.5s;
+      z-index: 5;
+      transition: opacity 0.5s;
 
       &:hover {
-        height: 100%;
+        opacity: 1;
       }
     }
 
@@ -312,6 +315,12 @@
     font-size: b.font-size(big);
     border-radius: b.$sp-0-5;
   }
+
+  #msg {
+    display: block;
+    color: b.color(text-3);
+    margin-top: b.$sp-1-5;
+  }
 }
 
 //------Footer-------
@@ -321,7 +330,7 @@
   padding: b.$sp-2 0;
   background-color: b.color(accent);
   font-weight: b.font-weight(300);
-  margin-top: b.$sp-2;
+  margin-top: b.$sp-1;
 
   .fa-heart {
     color: b.color(secondary);
@@ -390,8 +399,10 @@
 }
 
 .about {
+  // padding: 0 b.$sp-1-5;
   &__col-1, &__col-2 {
     flex-basis: 100%;
+    width: 100%;
   }
   
   &__col-1 {
@@ -404,13 +415,17 @@
 }
 
 .contact {
-  &__col-1 {
+  &__col-1, &__col-2 {
     flex-basis: 100%;
-    
+
   }
 
-  &__col-2 {
-    flex-basis: 100%;
+  &__col-1 {
+    margin-bottom: b.$sp-2 * 4;
+  }
+
+  &__cv {
+    margin-top: b.$sp-2 * 2;
   }
 }
 }
