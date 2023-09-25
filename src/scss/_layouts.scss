@@ -2,8 +2,6 @@
 
 /* LAYOUTS */
 
-//------Alert-------
-
 /* ------hero Section------- */
 .hero {
   width: 100%;
@@ -26,7 +24,7 @@
       margin-top: b.$sp-2;
 
       span {
-        color: b.color(secondary);
+        color: b.color(primary);
       }
 
       span.accent {
@@ -83,7 +81,7 @@
       content: '';
       width: 0;
       height: b.$sp-0-25;
-      background: b.color(secondary);
+      background: b.color(primary);
       position: absolute;
       left: 0;
       bottom: - b.$sp-0-75;
@@ -365,7 +363,7 @@
 
   /*-----Mobile Navbar-----*/
   &__nav {
-    background-color: b.color(secondary);
+    background-color: b.color(primary);
     position: fixed;
     top: 0;
     right: b.$sp-2 * -12;
@@ -382,7 +380,7 @@
   z-index: 2;
 
   &:hover {
-    background-color: lighten(b.color(secondary), 20%);
+    background-color: lighten(b.color(primary), 20%);
   }
 }
 

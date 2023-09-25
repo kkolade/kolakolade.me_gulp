@@ -1,6 +1,6 @@
-//____________________
-//------HELPERS-------
-//====================
+
+//======HELPERS=======
+
 
 // -----VARIABLES-----
 
@@ -12,19 +12,14 @@ $color-grey-dark: darken($color-grey, 25%);
 $color-grey-light: darken($color-white, 15%);
 
 $color-map: (
-  primary: #111,
-  accent: #262626,
-  secondary: #ff004f,
-  tertiary: #333,
+  primary: #ff004f,
+  accent: #2754b7,
   headline: $color-white,
-  menu-items: #111,
   text: $color-white,
   text-2: #ababab,
   text-3: #61b752,
   text-4: #343434,
-  link: #111,
   body: #080808,
-  container: $color-grey-light,
 );
 
 // ------FONT VARIABLES-------
@@ -56,9 +51,9 @@ $font-size-map: (
   big: 1.9rem,
   bigger: 2.1rem,
 );
-// -----SPACE: MARGIN / PADDING / SIZES-----
 
-// 1400px, 1024px, 680px, 480px, 320px.
+
+// -----SPACE: MARGIN / PADDING / SIZES-----
 $breakpoint-map-up: (
   x-large: 140rem,
   large: 102.4rem,
@@ -66,7 +61,6 @@ $breakpoint-map-up: (
   small: 48rem,
 );
 
-// 1300px, 1023px, 679px, 319px.
 $breakpoint-map-down: (
   large: 139.9rem,
   medium: 102.3rem,
@@ -153,17 +147,6 @@ $z-modal: 1000;
     url("../fonts/veteran_typewriter.ttf") format("svg");
 }
 
-// Common weight name mapping
-// 100 - thin
-// 200 - extra-light
-// 300 - light
-// 400 - normal/regular
-// 500 - medium
-// 600 - semi-bold
-// 700 - bold
-// 800 - extra-bold
-// 900 - black
-
 // -------------------
 // -----GLOBALS-----
 // -------------------
@@ -190,9 +173,6 @@ body {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
-}
-
-main {
 }
 
 h1 {
@@ -239,7 +219,7 @@ section {
     content: '';
     width: 100%;
     height: 2px;
-    background: color(secondary);
+    background: color(primary);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -250,17 +230,3 @@ section {
 .hidden {
   display: none;
 }
-// .section {
-//   padding: $sp-2* 3 0;
-// }
-
-// .section__title {
-//   font-size: $font-h2;
-// }
-
-// .section__title,
-// .section__sub-title {
-//   text-align: center;
-//   letter-spacing: 1px;
-//   word-spacing: $sp-0-25;
-// }
