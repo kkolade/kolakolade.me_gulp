@@ -1,41 +1,62 @@
-@use "base" as b;
+@use 'base' as b;
 
-/* LAYOUTS*/
+/* LAYOUTS */
 
-//------Alert-------
-
-/*------hero Section-------*/
+/* ------hero Section------- */
 .hero {
   width: 100%;
   height: 100vh;
   background-image: url('../images/kolakolade_portfolio_bg.jpeg');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 
   &__text-content {
     margin-top: 20%;
-    font-size: 30px;
+    font-size: b.$sp-3;
 
     &__typewriter {
-      font-family: "Veteran Typewriter", serif;
+      font-family: 'Veteran Typewriter', serif;
     }
-   
+
     h1 {
       font-size: b.font-size(hero);
-      margin-top: 20px;
-  
+      margin-top: b.$sp-2;
+
       span {
-        color: b.color(secondary);
+        color: b.color(primary);
       }
-  
+
       span.accent {
         color: b.color(accent);
       }
     }
   }
 
+  &__text {
+    font-size: b.font-size(normal) * 1.2;
+    margin: b.$sp-1;
+  }
+
+  &__cta {
+    margin-top: b.$sp-1;
+  }
+
+  &__social {
+    margin-top: b.$sp-3 * 4;
+  }
+  
+  .social-icon {
+    margin-right: b.$sp-2;
+    color: b.color(text-2);
+  }
+
+  &__mobile__icon {
+    display: none !important; 
+  }
 }
-//------Navigation-------
+
+/* ------Navigation------- */
 .hero {
   &__navbar {
     display: flex;
@@ -44,40 +65,40 @@
   }
 
   &__logo {
-    width: 250px;
+    width: b.$sp-3 * 8;
   }
 
   &__list {
     display: inline-block;
-    margin: 10px 20px;
+    margin: b.$sp-1 b.$sp-2;
   }
 
   &__link {
     color: b.$color-white;
-      position: relative;
+    position: relative;
 
+    &::after {
+      content: '';
+      width: 0;
+      height: b.$sp-0-25;
+      background: b.color(primary);
+      position: absolute;
+      left: 0;
+      bottom: - b.$sp-0-75;
+      transition: 0.25s;
+    }
+
+    &:hover {
       &::after {
-        content: '';
-        width: 0;
-        height: 2px;
-        background: b.color(secondary);
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        transition: .25s;
+        width: 100%;
       }
-
-      &:hover {
-        &::after {
-          width: 100%;
-        }
-      }  
+    }
   }
 }
 
-/*------About------*/
+/* ------About------ */
 .about {
-  padding: 80px 0;
+  padding: b.$sp-2 * 4 0;
   color: b.color(text-2);
   position: relative;
 
@@ -87,7 +108,7 @@
 
   &__img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: b.$sp-1-5;
   }
 
   &__col-2 {
@@ -95,10 +116,10 @@
   }
 
   &__headline {
-    margin-top: 0.8rem;
-    margin-bottom: 1.5rem;
+    margin-top: b.$sp-0-75;
+    margin-bottom: b.$sp-1-5;
   }
-  
+
   &__description {
     font-size: b.font-size(small);
   }
@@ -106,11 +127,11 @@
   &__tab {
     &-titles {
       display: flex;
-      margin: 20px 0 40px;
+      margin: b.$sp-2 0 b.$sp-2 * 2;
     }
 
     &-link {
-      margin-right: 50px;
+      margin-right: b.$sp-1-25 * 4;
       font-size: b.font-size(h3);
       font-weight: b.font-weight(medium);
       cursor: pointer;
@@ -119,12 +140,12 @@
       &::after {
         content: '';
         width: 0;
-        height: 2px;
+        height: b.$sp-0-25;
         background: b.color(secondary);
         position: absolute;
         left: 0;
-        bottom: -8px;
-        transition: .5s;
+        bottom: - b.$sp-0-75;
+        transition: 0.5s;
       }
 
       &.active::after {
@@ -134,10 +155,10 @@
   }
 
   &__links {
-    margin: 10px 0;
+    margin: b.$sp-1 0;
 
     &__items {
-      color: b.color(text-3 );
+      color: b.color(text-3);
       font-size: font-size(smaller);
     }
   }
@@ -150,70 +171,259 @@
     }
   }
 
- 
-}
-//------Popup-------
-.about {
-  &__overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    color: b.color(text-4);
-    }
-
-    &__popup {
-      width: 60vw;
-      height: 75vh;
-      background-color: b.color(text);
-      margin: 8rem auto;
-      padding: 5rem;
-      border-radius: 1rem;
-      position: relative;
-
-&__close {
-  color: b.color(secondary);
-  font-size: b.font-size(bigger);
-  cursor: pointer;
-  position: absolute;
-  top: b.$sp-1-25;
-  right: b.$sp-1-25 * 2;
-}
-
-&__header {
-  display: flex;
-}
-
-&__img {
-  margin-top: b.$sp-1-5;
-  width: b.$sp-1-25 * 6;
-  height: b.$sp-1-25 * 6;
-  border-radius: b.$sp-0-5;
-}
-
-    &__title,
-    &__headline {
-      color: b.color(text-4);
-      margin-left: b.$sp-1-25;
-    }
-
-    &__headline { margin-top: b.$sp-0-5;}
-
-    &__description {
-      font-size: b.font-size(small);
-      margin-top: b.$sp-1-25;
-
-      &-text {
-        margin-bottom: b.$sp-0-75;
-      }
-    }
+  &__skills__icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
-//---Section= Section_Name----
 
-//------Aside-------
+/* ------Portfolio------- */
+.portfolio {
+  padding: b.$sp-3 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(b.$sp-3 *8, 1fr));
+    gap: b.$sp-3;
+    margin-top: b.$sp-2;
+  }
+
+  &__work {
+    border-radius: b.$sp-1;
+    position: relative;
+    overflow: hidden;
+    
+    &__layer {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: linear-gradient(rgba(0,0,0,0.6), b.color(secondary));
+      border-radius: b.$sp-1;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 b.$sp-2 * 2;
+      text-align: center;
+      font-size: b.font-size(small);
+      z-index: 5;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__title{
+      font-weight: b.font-weight(500);
+      margin-bottom: b.$sp-2;
+    }
+    
+    &__image {
+      border-radius: b.$sp-1;
+      display: block;
+      transition: transform 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__link-item {
+      margin-top: b.$sp-2;
+      color: b.color(secondary);
+      text-decoration: none;
+      line-height: b.$sp-2;
+      background-color: b.color(headline);
+      padding: b.$sp-0-75 b.$sp-1;
+      border-radius: b.$sp-1-5;
+      text-align: center;
+      display: inline-block;
+      margin-left: b.$sp-0-5;
+    }
+    
+  }
+
+  &__link {
+    margin: b.$sp-1-25 * 4 auto;
+  }
+
+}
+
+//---Contact----
+.contact {
+  &__col-1 {
+    flex-basis: 35%;
+    
+  }
+
+  &__col-2 {
+    flex-basis: 60%;
+  }
+
+  &__detail {
+    margin-top: b.$sp-1-5 *2;
+  }
+
+  .detail-icon {
+    color: b.color(secondary);
+    margin-right: b.$sp-1;
+  }
+
+  .social {
+    margin-top: b.$sp-1-5 * 2;
+    &-icon {
+      font-size: b.font-size(bigger);
+      margin-right: b.$sp-1-25;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &__cv {
+    margin-top: b.$sp-3 * 5;
+    background-color: b.color(secondary);
+
+     &:hover {
+      color: b.color(secondary);
+      background-color: transparent;
+     }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: b.color(accent);
+    padding: b.$sp-1-5;
+    margin: b.$sp-1-5 0;
+    color: b.color(text);
+    font-size: b.font-size(big);
+    border-radius: b.$sp-0-5;
+  }
+
+  #msg {
+    display: block;
+    color: b.color(text-3);
+    margin-top: b.$sp-1-5;
+  }
+}
 
 //------Footer-------
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: b.$sp-2 0;
+  background-color: b.color(accent);
+  font-weight: b.font-weight(300);
+  margin-top: b.$sp-1;
+
+  .fa-heart {
+    color: b.color(secondary);
+  }
+}
+
+//------Small Screens-------
+@media only screen and (max-width: b.screen-size(small)){
+.hero {
+  background-image: url('../images/kolakolade_portfolio_mobile_bg.jpeg');
+
+  &__text-content {
+    margin-top: 180%;
+    font-size: b.font-size(normal);
+
+    h1 {
+      font-size: b.font-size(small) * 2;
+    }
+
+    &__typewriter {
+      font-size: b.font-size(big);
+    }
+  }
+
+  &__social {
+    margin-top: b.$sp-3;
+  }
+
+  .social-icon {
+    font-size: b.font-size(big);
+  }
+
+  /*-----Mobile Navbar-----*/
+  &__nav {
+    background-color: b.color(primary);
+    position: fixed;
+    top: 0;
+    right: b.$sp-2 * -12;
+    width: b.$sp-2 * 12;
+    font-size: b.font-size(h2);
+    height: 100vh;
+    padding-top: b.$sp-2 * 5;
+    transition: 2s;
+  }
+
+&__list {
+  display: block;
+  margin-top: b.$sp-2;
+  z-index: 2;
+
+  &:hover {
+    background-color: lighten(b.color(primary), 20%);
+  }
+}
+
+  &__mobile__icon{
+    display: block !important; 
+    font-size: b.font-size(h2); 
+  }
+
+  #close-menu {
+    position: absolute;
+    top: b.$sp-2;
+    left: b.$sp-2;
+  }
+}
+
+.about {
+  // padding: 0 b.$sp-1-5;
+  &__col-1, &__col-2 {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  
+  &__col-1 {
+    margin-bottom: b.$sp-3;
+  }
+
+  &__skills__icons {
+    justify-content: center;
+  }
+}
+
+.contact {
+  &__col-1, &__col-2 {
+    flex-basis: 100%;
+
+  }
+
+  &__col-1 {
+    margin-bottom: b.$sp-2 * 4;
+  }
+
+  &__cv {
+    margin-top: b.$sp-2 * 2;
+  }
+}
+}

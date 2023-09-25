@@ -1,20 +1,195 @@
 @use "base" as b;
 
-/*--- COMPONENTS ---*/
+/* --- COMPONENTS --- */
+.social {
+    &__link {
+      color: b.color(text-2);
+    }
+
+    &-icon {
+      display: inline-block;
+      color: b.color(text-2);
+      width: b.$sp-2;
+      height: b.$sp-0-75;
+      transition: all 0.3s;
+
+      &:hover {
+        color: b.color(primary);
+        transform: scale(1.2);
+      }
+
+      &:active {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
 
 //------Alert-------
 
 //------Button-------
+.btn {
+  display: inline-block;
+  color: b.$color-white;
+  background-color: b.color(primary);
+  border: 2px solid b.color(primary);
+  font-size: b.font-size(bigger);
+  font-weight: b.font-weight(semi-bold);
+  padding: b.$spe-0-5 b.$spe-2;
+  border-radius: b.$sp-3;
+  text-align: center;
+  transition: all 0.5s;
+
+  &:hover {
+    color: b.color(primary);
+    background-color: transparent;
+    box-shadow: 0px 2px 5px lighten(b.color(primary), 60%);
+  }
+
+  &:active {
+    transform: translateY(2px);
+   }
+}
+
+.btn--secondary {
+  
+  @extend .btn;
+  
+  display: block;
+  width: fit-content;
+  color: b.color(text);
+  background-color: transparent;
+  border-radius: b.$sp-0-5;
+  color: b.color(text) ;
+  
+  &:hover {
+    color: b.color(text);
+    background-color: b.color(primary);
+  }
+}
+
 .btn--trans {
   display: inline-block;
-  color: b.color(secondary);
+  color: b.color(primary);
   border: none;
   background-color: transparent;
   font-size: b.font-size(normal);
   margin-left: 1rem;
   cursor: pointer;
 }
-//------Carousel-------
+
+/* ------Popup------- */
+.about {
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000, $alpha: 0.5);
+    color: b.color(text-4);
+  }
+
+  &__popup {
+    width: 60vw;
+    height: 75vh;
+    background-color: b.color(text);
+    margin: b.$sp-1 * 8 auto;
+    padding: b.$spe-1-25 * 4;
+    border-radius: b.$sp-1;
+    position: relative;
+
+    &__close {
+      color: b.color(primary);
+      font-size: b.font-size(bigger);
+      cursor: pointer;
+      position: absolute;
+      top: b.$sp-1-25;
+      right: b.$sp-1-25 * 2;
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__img {
+      margin-top: b.$sp-1-5;
+      width: b.$sp-1-25 * 6;
+      height: b.$sp-1-25 * 6;
+      border-radius: b.$sp-0-5;
+    }
+
+    &__title,
+    &__headline {
+      color: b.color(text-4);
+      margin-left: b.$sp-1-25;
+    }
+
+    &__headline {
+      margin-top: b.$sp-0-5;
+    }
+
+    &__description {
+      font-size: b.font-size(small);
+      margin-top: b.$sp-1-25;
+
+      &-text {
+        margin-bottom: b.$sp-0-75;
+      }
+    }
+    
+  }
+}
+//------mobile-------
+@media only screen and (max-width: b.screen-size(small)) {
+  .about {
+    &__popup{
+      width: 90vw;
+      padding: b.$sp-1-5;
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      &__img {
+        margin-top: b.$sp-1-5;
+        width: 60%;
+        height: auto;
+        margin: b.$sp-2 auto;
+        border-radius: b.$sp-0-5;
+      }
+  
+      &__title,
+      &__headline {
+        color: b.color(text-4);
+        text-align: center;
+      }
+  
+      &__headline {
+        margin-top: b.$sp-0-5;
+        font-weight: b.font-weight(bold);
+      }
+  
+      &__description {
+        font-size: b.font-size(small);
+        margin-top: b.$sp-1-25;
+        overflow-y: scroll;
+  
+        &-text {
+          margin-bottom: b.$sp-0-75;
+        }
+      }
+    }
+  }
+
+  .btn--secondary {
+    display: block;
+    width: 100%;
+  }
+}
 
 //------Forms-------
 

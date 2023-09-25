@@ -1,3 +1,10 @@
 @forward "base";
 @forward "components";
 @forward "layouts";
+
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+// import one or more styles
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
