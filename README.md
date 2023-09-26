@@ -12,21 +12,18 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 kolakolade.me - A Peronal Portfolio <a name="about-project"></a>
+# 📖 kolakolade.me - A Personal Portfolio <a name="about-project"></a>
 
-**kolakolade.me** is my personal portfolio built to showcase myself and the skills & knowledge acquired at the completion of the Remote Full Stack Web Development Program at Microverse, an online Coding Bootcamp.
+**kolakolade.me** is my personal portfolio built to showcase myself and the skills & knowledge acquired at the completion of the Remote Full Stack Web Development Program at Microverse - An online school for international web developers where students learn collaboratively with peers around the world.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -103,7 +100,7 @@ Example commands:
 
 ### Install
 
-Install the gems and packges required for this project with:
+Install the packages required for this project with:
 
 ```sh
   npm install
@@ -136,7 +133,7 @@ Open your browser and go to:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add dark/light theme**
-- [ ] **Use React to re=create the website**
+- [ ] **Use React to re-create the website**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +161,7 @@ If you like this project please [buy me coffee](
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse for the opportunity to learn and grow
-I would like to also give credit to Avinesh of GretaStack for this wonderful concept.
+I would like to also give credit to Avinesh of GreatStack for this wonderful concept.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
