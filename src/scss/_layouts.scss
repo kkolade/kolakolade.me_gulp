@@ -272,7 +272,7 @@
   }
 
   .detail-icon {
-    color: b.color(secondary);
+    color: b.color(text);
     margin-right: b.$sp-1;
   }
 
@@ -290,11 +290,14 @@
 
   &__cv {
     margin-top: b.$sp-3 * 5;
-    background-color: b.color(secondary);
+    background-color: b.color(primary);
 
      &:hover {
-      color: b.color(secondary);
       background-color: transparent;
+     }
+
+     &:active {
+      transform: translateY(2px);
      }
   }
 
@@ -306,7 +309,7 @@
     width: 100%;
     border: 0;
     outline: none;
-    background-color: b.color(accent);
+    background-color: b.color(secondary);
     padding: b.$sp-1-5;
     margin: b.$sp-1-5 0;
     color: b.color(text);
@@ -326,7 +329,7 @@
   width: 100%;
   text-align: center;
   padding: b.$sp-2 0;
-  background-color: b.color(accent);
+  background-color: b.color(secondary);
   font-weight: b.font-weight(300);
   margin-top: b.$sp-1;
 
