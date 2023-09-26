@@ -5,7 +5,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+<<<<<<< HEAD
 .DS_Store
+=======
+.pnpm-debug.log*
+>>>>>>> a95c5776759fd0355dfe38caf73b235d4143e455
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -42,8 +46,13 @@ build/Release
 node_modules/
 jspm_packages/
 
+<<<<<<< HEAD
 # TypeScript v1 declaration files
 typings/
+=======
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
+>>>>>>> a95c5776759fd0355dfe38caf73b235d4143e455
 
 # TypeScript cache
 *.tsbuildinfo
@@ -54,6 +63,12 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+<<<<<<< HEAD
+=======
+# Optional stylelint cache
+.stylelintcache
+
+>>>>>>> a95c5776759fd0355dfe38caf73b235d4143e455
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -69,6 +84,7 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+<<<<<<< HEAD
 # dotenv environment variables file
 .env
 .env.test
@@ -78,21 +94,54 @@ typings/
 
 # Next.js build output
 .next
+=======
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+>>>>>>> a95c5776759fd0355dfe38caf73b235d4143e455
 
 # Nuxt.js build / generate output
 .nuxt
 dist
+<<<<<<< HEAD
 build
 
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and *not* Next.js
+=======
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+>>>>>>> a95c5776759fd0355dfe38caf73b235d4143e455
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
 # vuepress build output
 .vuepress/dist
 
+<<<<<<< HEAD
+=======
+# vuepress v2.x temp and cache directory
+.temp
+.cache
+
+# Docusaurus cache and generated files
+.docusaurus
+
+>>>>>>> a95c5776759fd0355dfe38caf73b235d4143e455
 # Serverless directories
 .serverless/
 
@@ -104,3 +153,16 @@ build
 
 # TernJS port file
 .tern-port
+<<<<<<< HEAD
+=======
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+>>>>>>> a95c5776759fd0355dfe38caf73b235d4143e455
