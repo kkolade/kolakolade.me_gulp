@@ -1,5 +1,5 @@
 <!-- TABLE OF CONTENTS -->
-
+<img width="15%" src="./kolakolade_favicon.png ">
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -24,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 The Bookstore React App <a name="about-project"></a>
+# 📖 kolakolade.me - A Peronal Portfolio <a name="about-project"></a>
 
-**The Bookstore React App** is a SPA project I'll be creating using React.
+**kolakolade.me** is my personal portfolio built to showcase myself and the skills & knowledge acquired at the completion of the Remote Full Stack Web Development Program at Microverse, an online Coding Bootcamp.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -35,10 +35,17 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://reactjs.org/">Webpack</a></li>
-    <li><a href="https://reactjs.org/">React Router</a></li>
-    <li><a href="https://reactjs.org/">Babel</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Library</summary>
+  <ul>
+    <li><a href="https://sass-lang.com/">SASS</a></li>
+    <li><a href="https://gulpjs.com/">Gulp</a></li>
+    <li><a href="https://fontawesome.com/">Fontawesome</a></li>
   </ul>
 </details>
 
@@ -46,18 +53,20 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **A single page app built with React**
-- **Ability to route between multiple pges**
+- **High contrast colors**
+- **Parralax Effect**
+- **Grid layout**
+- **Form to gooogle sheet**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live demo](https://mindhub-bookstore.onrender.com/)
+Coming soon
+<!-- - [Live Demo](co) -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 
@@ -67,8 +76,10 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-Node.js and Git running on your computer
+In order to run this project you need the followings installed and running on your system:
+
+- Git
+- Gulp
 
 <!--
 Example command:
@@ -82,26 +93,20 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<pre>git clone git@github.com:kkolade/math-magician.git</pre>
+<pre>https://github.com/kkolade/kolakolade_portfolio</pre>
+
+- `cd kolakolade`
+- `code .` <!-- If you are using VS Code -->
 <!--
 Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
 --->
 
 ### Install
 
-Install this project with:
-
-<!--
-Example command:
+Install the gems and packges required for this project with:
 
 ```sh
-  cd my-project
-  gem install
+  npm install
 ```
 --->
 
@@ -109,21 +114,11 @@ Example command:
 
 To run the project, execute the following command:
 
-<pre>npm run start</pre>
+<pre>gulp</pre>
 
-### Run tests
+Open your browser and go to:
+<pre>http://localhost:3000/</pre>
 
-To run tests, run the following command:
-
-<pre>npm run test</pre>
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 <!-- AUTHORS -->
 
@@ -141,7 +136,8 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add dark/liight theme**
+- [ ] **Add dark/light theme**
+- [ ] **Use React to re=create the website**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,7 +147,7 @@ Example command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kkolade/the-bookstore/issues).
+Feel free to check the [issues page](https://github.com/kkolade/blog/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,6 +165,7 @@ If you like this project please [buy me coffee](
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse for the opportunity to learn and grow
+I would like to also give credit to Avinesh of GretaStack for this wonderful concept.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
