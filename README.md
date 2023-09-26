@@ -100,7 +100,7 @@ Example commands:
 
 ### Install
 
-Install the packages required for this project with:
+Install the packges required for this project with:
 
 ```sh
   npm install
@@ -160,7 +160,7 @@ If you like this project please [buy me coffee](
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the opportunity to learn and grow
+I would like to thank Microverse for the opportunity to learn and grow. <br>
 I would like to also give credit to Avinesh of GreatStack for this wonderful concept.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
