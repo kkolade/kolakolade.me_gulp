@@ -108,7 +108,6 @@ Install the gems and packges required for this project with:
 ```sh
   npm install
 ```
---->
 
 ### Usage
 
