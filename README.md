@@ -60,10 +60,9 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Coming soon
 <!-- - [Live Demo](co) -->
 
-
+[Live Demo](https://kkolade.github.io/kolakolade_portfolio/)
 
 <!-- GETTING STARTED -->
 
