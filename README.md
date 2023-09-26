@@ -53,7 +53,7 @@
 - **High contrast colors**
 - **Parralax Effect**
 - **Grid layout**
-- **Form to gooogle sheet**
+- **Form to google sheet**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,7 +62,7 @@
 
 <!-- - [Live Demo](co) -->
 
-[Live Demo](https://kkolade.github.io/kolakolade_portfolio/)
+[Live Demo](https://kkolade.github.io/kolakolade.me/)
 
 <!-- GETTING STARTED -->
 
