@@ -1,7 +1,7 @@
 {
-  "name": "frontend-project-template",
+  "name": "kolakolade.me",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Personal portfolio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,8 @@
     "lint:js": "eslint \"**/*.{js,jsx}\"",
     "lint:css": "stylelint \"src/**/*.scss\"",
     "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "*.{css,scss}": [
@@ -17,11 +18,14 @@
     ],
     "*.{js,jsx}": [
       "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kkolade/frontend-project-template.git"
+    "url": "git+https://github.com/kkolade/kolakolade_portfolio.git"
   },
   "keywords": [],
   "author": {
@@ -29,11 +33,11 @@
     "email": "kolakolade@gmail.com",
     "url": "www.sprintplex.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kkolade/frontend-project-template/issues"
+    "url": "https://github.com/kkolade//kolakolade_portfolio/issues"
   },
-  "homepage": "https://github.com/kkolade/frontend-project-template#readme",
+  "homepage": "https://github.com/kkolade//kolakolade_portfolio#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
     "node-sass": "^7.0.1",
@@ -48,6 +52,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.28.1",
+    "gh-pages": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
